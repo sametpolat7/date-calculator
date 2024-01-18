@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- FontAwesome CDN -->
+    <script src="https://kit.fontawesome.com/1785268758.js" crossorigin="anonymous"></script>
+    <title>Date Calculator</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="upper-half">
+            <div class="header">
+                <h1>Date Calculator</h1>
+                <h2>with days</h2>
+            </div>
+            <div class="input-container blur">
+                <div class="date-area">
+                    <label for="datepicker">Enter a date :</label>
+                    <input type="date" id="datepicker" autofocus>
+                    <button onclick="calc()">Calculate!</button>
+                </div>
+            </div>
+        </div>
+        <div class="lower-half">
+            <div class="result-container">
+                <div class="result-area">
+                    <p id="days"></p>
+                    <p id="years-months"></p>
+                </div>
+                <div class="interesting-area">
+                    <h2>Here's something interesting!</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>

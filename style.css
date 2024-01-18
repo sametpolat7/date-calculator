@@ -1,0 +1,130 @@
+:root {
+    --main-text-color: #333333;
+    --main-asist-color: #ff6600;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    height: 100vh;
+    /* background: linear-gradient(to bottom, #2c3e50, #7f8c8d);   Uyku temalı*/
+    /* background: linear-gradient(to bottom, #45a049, #00a651);  Para temalı*/
+    /* background: linear-gradient(to bottom, #001f3f, #005559); */
+    background: linear-gradient(to bottom, #e6e6e6, #ffffff);
+}
+
+.container {
+    margin: 2rem 4rem;
+}
+
+.upper-half {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+}
+
+.header h1 {
+    font-size: 4.4rem;
+    color: var(--main-text-color);
+    letter-spacing: -.2rem;
+}
+
+.header h2 {
+    display: flex;
+    justify-content: end;
+    margin-top: -1rem;
+    font-size: 2.5rem;
+    /* color: #FFC300; */
+    color: var(--main-asist-color);
+}
+
+.input-container{
+    display: flex;
+    justify-content: center;
+    width: 55%;
+    margin-top: 2rem;
+    border: 1px solid red;
+}
+.date-area {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.blur {
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, .9);
+    box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.1);
+}
+.date-area label {
+    margin-right: 1rem;
+    font-size: 1.5rem;
+    letter-spacing: -1px;
+    color: var(--main-text-color);
+}
+.date-area input {
+    margin-right: 1rem;
+    padding: .5rem 1rem;
+    letter-spacing: .7px;
+    font-size: 1.2rem;
+    color: var(--main-text-color);
+}
+.date-area input::-webkit-calendar-picker-indicator{
+    transform: scale(1.5);
+    margin-right: .5rem;
+    cursor: pointer;
+}
+.date-area button {
+    padding: .8rem 1.5rem;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color:#ffffff;
+    color: var(--main-text-color);
+    border: 1px solid var(--main-text-color);
+}
+.date-area button:hover {
+    background-color:var(--main-asist-color);
+    border: 1px solid transparent;
+    color: white;
+
+}
+
+.lower-half {
+    border: 1px solid red;
+    float: right;
+    width: 55%;
+    margin-top: 4rem;
+}
+
+.result-container {
+    height: 30vw;
+    clear: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.result-area{
+    font-size: 2rem;
+    color: var(--main-text-color);
+    text-align: center;
+}
+.asist-color {
+    color: var(--main-asist-color);
+}
