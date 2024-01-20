@@ -20,20 +20,20 @@ function calc() {
     let monthInfo = currentDate.getMonth() - selectedDate.getMonth();
     let dayInfo = currentDate.getDate() - selectedDate.getDate();
 
-    if (isNaN(totalDays) || isNaN(yearInfo) || isNaN(monthInfo) || isNaN(dayInfo)) {
+    if (isNaN(totalDays) || isNaN(yearInfo) || isNaN(monthInfo) || isNaN(dayInfo)) { // Validation Control 1
         resultArea.classList.add("hidden");
         moreInfoArea.classList.add("hidden");
         quotesArea.classList.add("hidden");
 
         alert("Please enter a date.");
 
-    }else if(selectedDate > currentDate) {
+    }else if(selectedDate > currentDate) { // Validation Control 2
         resultArea.classList.add("hidden");
         moreInfoArea.classList.add("hidden");
         quotesArea.classList.add("hidden");
 
         alert("Please do not enter a date from the future.");
-        
+
     } else {
         resultArea.classList.remove("hidden");
         moreInfoArea.classList.remove("hidden");
