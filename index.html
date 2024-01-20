@@ -13,35 +13,30 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="header">
+            <h1>Date Calculator</h1>
+            <h2>with days</h2>
+    </div>
     <div class="container">
-        <div class="upper-half">
-            <div class="header">
-                <h1>Date Calculator</h1>
-                <h2>with days</h2>
-            </div>
-            <div class="input-container blur">
-                <div class="date-area">
-                    <label for="datepicker">Enter a date :</label>
-                    <input type="date" id="datepicker" autofocus>
-                    <button onclick="calc()">Calculate!</button>
-                </div>
-            </div>
+        <div class="date-area blur">
+            <label for="datepicker">Enter a date :</label>
+            <input type="date" id="datepicker" onkeydown="enterFunc(event)" min="2024-01-01" autofocus>
+            <button onclick="calc()">Calculate!</button>
         </div>
-        <div class="lower-half">
-            <div class="result-container">
-                <div class="result-area">
-                    <p id="days"></p>
-                    <p id="years-months"></p>
-                </div>
-                <div class="interesting-area">
-                    <h2>Here's something interesting!</h2>
-                </div>
-            </div>
+        <div id="result" class="result-area">
+            <p id="days"></p>
+            <p id="years-months"></p>
+        </div>
+        <div id="moreInfo" class="more-info">
+            <p id="week"></p>
+            <p id="hours"></p>
+            <p id="minutes"></p>
+            <p id="seconds"></p>
         </div>
     </div>
-
-
-
+    <div id="quotes" class="quotes-area">
+        <div id="sentence"></div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>

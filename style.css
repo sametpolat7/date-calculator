@@ -1,6 +1,6 @@
 :root {
     --main-text-color: #333333;
-    --main-asist-color: #ff6600;
+    --main-asist-color: #00a86b;
 }
 
 * {
@@ -12,67 +12,55 @@
 
 body {
     height: 100vh;
-    /* background: linear-gradient(to bottom, #2c3e50, #7f8c8d);   Uyku temalı*/
-    /* background: linear-gradient(to bottom, #45a049, #00a651);  Para temalı*/
-    /* background: linear-gradient(to bottom, #001f3f, #005559); */
     background: linear-gradient(to bottom, #e6e6e6, #ffffff);
-}
-
-.container {
-    margin: 2rem 4rem;
-}
-
-.upper-half {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
 }
 
 .header {
     display: flex;
     flex-direction: column;
+    margin-left: 1rem
 }
 
 .header h1 {
-    font-size: 4.4rem;
+    font-size: 2.8rem;
     color: var(--main-text-color);
     letter-spacing: -.2rem;
 }
 
 .header h2 {
-    display: flex;
-    justify-content: end;
-    margin-top: -1rem;
-    font-size: 2.5rem;
-    /* color: #FFC300; */
+    margin: -1rem 0 0 12rem;
+    font-size: 1.5rem;
     color: var(--main-asist-color);
 }
 
-.input-container{
+.container {
+    margin: 1rem 4rem;
     display: flex;
-    justify-content: center;
-    width: 55%;
-    margin-top: 2rem;
-    border: 1px solid red;
+    flex-direction: column;
+    align-items: center;
 }
+
 .date-area {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    padding: 2rem 8rem;
 }
+
 .blur {
     border-radius: 8px;
     background-color: rgba(255, 255, 255, .9);
     box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.1);
 }
+
 .date-area label {
     margin-right: 1rem;
     font-size: 1.5rem;
     letter-spacing: -1px;
     color: var(--main-text-color);
 }
+
 .date-area input {
     margin-right: 1rem;
     padding: .5rem 1rem;
@@ -80,11 +68,13 @@ body {
     font-size: 1.2rem;
     color: var(--main-text-color);
 }
+
 .date-area input::-webkit-calendar-picker-indicator{
     transform: scale(1.5);
     margin-right: .5rem;
     cursor: pointer;
 }
+
 .date-area button {
     padding: .8rem 1.5rem;
     text-decoration: none;
@@ -97,34 +87,91 @@ body {
     color: var(--main-text-color);
     border: 1px solid var(--main-text-color);
 }
+
 .date-area button:hover {
     background-color:var(--main-asist-color);
     border: 1px solid transparent;
     color: white;
-
-}
-
-.lower-half {
-    border: 1px solid red;
-    float: right;
-    width: 55%;
-    margin-top: 4rem;
-}
-
-.result-container {
-    height: 30vw;
-    clear: right;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
 }
 
 .result-area{
-    font-size: 2rem;
+    font-size: 2.2rem;
     color: var(--main-text-color);
     text-align: center;
+    margin: 3rem 0;
 }
-.asist-color {
+
+.result-textcolor {
     color: var(--main-asist-color);
+}
+
+.more-info {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.quotes-area {
+    margin: 4rem 2rem;
+    text-align: end;
+}
+
+#sentence {
+    color: #4e4e4e;
+    display: none;
+}
+
+#sentence::before {
+    content: "|";
+    font-size: 2rem;
+    font-style: italic;
+    margin-right: .5rem;
+    color: var(--main-text-color);
+}
+
+.hidden {
+    display: none;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 992px) {
+    .header {
+        width: 100%;
+        align-items: center;
+        margin: 0;
+    }
+    .header h2 {
+        margin: 0;
+    }
+    .date-area {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem 4rem;
+        margin-top: 1rem;
+    }
+    .date-area label {
+        display: none;
+    }
+    .date-area button {
+        margin-top: 1rem;
+    }
+    .result-area{
+        font-size: 1.4rem;
+        color: var(--main-text-color);
+        text-align: center;
+        margin: 2rem 0;
+    }
+    .more-info {
+        font-size: .9rem;
+    }
+    .quotes-area {
+        margin: 2rem 1rem;
+        font-size: .8rem;
+        text-align: end;
+    }
+    #sentence::before {
+        font-size: .8rem;
+        margin-right: .3rem;
+    }
+
 }
